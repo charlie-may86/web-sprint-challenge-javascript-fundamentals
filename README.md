@@ -28,14 +28,26 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+    ans: Both .foreach and .map executes some task on each element of an array. The difference is that .map returns a new array, and .foreach does not.
 
 2. Explain the difference between a callback and a higher order function.
+    ans: A callback function is used as an argument in a higher order function. A higher order function is a function which takes a callback funtion function as an argument.
 
 3. What is closure?
+    ans: closure is the set of variables available to you given the parent child relationship chain you are currently operating in.
 
 4. Describe the four rules of the 'this' keyword.
+    ans:
+    1. Window Binding - not something we aim to use. If we don't give 'this' any context it default to the window or the golbal object in node. Unless you are in strict mode, in which case you will get undefined.
+    2. Implicit binding - Most common rule - its found in 8-% of use cases. When the funtion is invoked, look to the left of the dot, that's what 'this' referes to. This rule only applies to objects with methods.
+    3. Explicit Binding 
+        - Call: will immediately invoke the funciton - .call you pass in your arguments 1 by 1
+        - Apply: will immediately invoke the function - .apply you pass in your arguemtns as an array
+        - Bind: you pass in arguments 1 by 1 byt it does not immediately invoke the function, instead it returns a brand new function that can be invoked later
+        - New Binding: using the new keyword constructs a new object and this points to it when a function is invoked as a constructor function, using the new keyword  'this' points to the new object that is created.
 
-5. Why do we need super() in an extended class?
+    5. Why do we need super() in an extended class?
+        ans: super() calls the parent classes attributes and binds them to the extended class.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
