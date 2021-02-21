@@ -55,6 +55,8 @@ const zooAnimals = [
     { animal_name: "Hawk-eagle, crowned", population: 10, scientific_name: "Spizaetus coronatus", state: "Florida" },
     { animal_name: "Australian pelican", population: 5, scientific_name: "Pelecanus conspicillatus", state: "West Virginia" },
   ];
+
+  
   
   /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
   The zoos want to display both the scientific name and the animal name in front of the habitats. 
@@ -62,8 +64,10 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(zooAnimals){
+    const displayNames = []
+    zooAnimals.forEach(i => displayNames.push(`name: ${i['animal_name']}, scientific: ${i['scientific_name']}`))
+    return displayNames
   }
   
 
@@ -73,8 +77,9 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(zooAnimals){
+    const lowerCaseNames = zooAnimals.map(x => x['animal_name'].toLowerCase())
+    return lowerCaseNames
   }
   
   
